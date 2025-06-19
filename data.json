@@ -1,0 +1,308 @@
+{
+  "medicines": [
+    {
+      "id": 1,
+      "name": "Парацетамол",
+      "description": "Обезболивающее и жаропонижающее средство",
+      "price": 150,
+      "category": "pain",
+      "symptoms": ["Головная боль", "Температура", "Боль в суставах"],
+      "usage": "Принимать по 1-2 таблетки до 4 раз в день. Не превышать дозировку.",
+      "contraindications": "Индивидуальная непереносимость, тяжелые заболевания печени",
+      "image": "images/paracetamol.jpg",
+      "popularity": 95
+    },
+    {
+      "id": 2,
+      "name": "Ибупрофен",
+      "description": "Противовоспалительное и обезболивающее средство",
+      "price": 200,
+      "category": "pain",
+      "symptoms": ["Головная боль", "Боль в суставах", "Температура"],
+      "usage": "По 1 таблетке 3-4 раза в день после еды",
+      "contraindications": "Язвенная болезнь, беременность, детский возраст до 12 лет",
+      "image": "images/ibuprofen.jpg",
+      "popularity": 88
+    },
+    {
+      "id": 3,
+      "name": "Аспирин",
+      "description": "Ацетилсалициловая кислота для разжижения крови",
+      "price": 120,
+      "category": "heart",
+      "symptoms": ["Высокое давление", "Боль в сердце"],
+      "usage": "По 1 таблетке в день для профилактики тромбозов",
+      "contraindications": "Язвенная болезнь, гемофилия, детский возраст",
+      "image": "images/aspirin.jpg",
+      "popularity": 75
+    },
+    {
+      "id": 4,
+      "name": "Амоксициллин",
+      "description": "Антибиотик широкого спектра действия",
+      "price": 350,
+      "category": "antibiotics",
+      "symptoms": ["Боль в горле", "Температура"],
+      "usage": "По 1 капсуле 3 раза в день. Курс лечения 7-10 дней",
+      "contraindications": "Аллергия на пенициллины, беременность",
+      "image": "images/amoxicillin.jpg",
+      "popularity": 82
+    },
+    {
+      "id": 5,
+      "name": "Лоратадин",
+      "description": "Антигистаминный препарат от аллергии",
+      "price": 180,
+      "category": "allergy",
+      "symptoms": ["Аллергия"],
+      "usage": "1 таблетка в день независимо от приема пищи",
+      "contraindications": "Беременность, кормление грудью, детский возраст до 2 лет",
+      "image": "images/loratadine.jpg",
+      "popularity": 90
+    },
+    {
+      "id": 6,
+      "name": "Омепразол",
+      "description": "Ингибитор протонной помпы для лечения изжоги",
+      "price": 280,
+      "category": "stomach",
+      "symptoms": ["Изжога", "Боль в животе"],
+      "usage": "1 капсула в день утром натощак",
+      "contraindications": "Беременность, детский возраст, индивидуальная непереносимость",
+      "image": "images/omeprazole.jpg",
+      "popularity": 85
+    },
+    {
+      "id": 7,
+      "name": "Витамин C",
+      "description": "Аскорбиновая кислота для укрепления иммунитета",
+      "price": 90,
+      "category": "vitamins",
+      "symptoms": ["Усталость", "Температура"],
+      "usage": "1-2 таблетки в день во время еды",
+      "contraindications": "Индивидуальная непереносимость",
+      "image": "images/vitamin-c.jpg",
+      "popularity": 92
+    },
+    {
+      "id": 8,
+      "name": "Мелатонин",
+      "description": "Гормон сна для нормализации сна",
+      "price": 220,
+      "category": "sleep",
+      "symptoms": ["Бессонница"],
+      "usage": "1 таблетка за 30 минут до сна",
+      "contraindications": "Беременность, кормление грудью, аутоиммунные заболевания",
+      "image": "images/melatonin.jpg",
+      "popularity": 78
+    },
+    {
+      "id": 9,
+      "name": "Валериана",
+      "description": "Успокоительное средство растительного происхождения",
+      "price": 110,
+      "category": "stress",
+      "symptoms": ["Стресс", "Бессонница"],
+      "usage": "1-2 таблетки 3 раза в день",
+      "contraindications": "Индивидуальная непереносимость",
+      "image": "images/valerian.jpg",
+      "popularity": 80
+    },
+    {
+      "id": 10,
+      "name": "Активированный уголь",
+      "description": "Энтеросорбент для очищения организма",
+      "price": 80,
+      "category": "stomach",
+      "symptoms": ["Тошнота", "Боль в животе"],
+      "usage": "1 таблетка на 10 кг веса 3-4 раза в день",
+      "contraindications": "Язвенная болезнь, кровотечения ЖКТ",
+      "image": "images/activated-charcoal.jpg",
+      "popularity": 87
+    },
+    {
+      "id": 11,
+      "name": "Цитрамон",
+      "description": "Комбинированный препарат от головной боли",
+      "price": 95,
+      "category": "pain",
+      "symptoms": ["Головная боль"],
+      "usage": "1-2 таблетки при необходимости, не более 4 раз в день",
+      "contraindications": "Язвенная болезнь, гипертония, беременность",
+      "image": "images/citramon.jpg",
+      "popularity": 83
+    },
+    {
+      "id": 12,
+      "name": "Фурацилин",
+      "description": "Антисептик для полоскания горла",
+      "price": 60,
+      "category": "cold",
+      "symptoms": ["Боль в горле"],
+      "usage": "1 таблетка на стакан теплой воды, полоскать 3-4 раза в день",
+      "contraindications": "Индивидуальная непереносимость",
+      "image": "images/furacilin.jpg",
+      "popularity": 76
+    },
+    {
+      "id": 13,
+      "name": "Називин",
+      "description": "Сосудосуживающие капли от насморка",
+      "price": 140,
+      "category": "cold",
+      "symptoms": ["Насморк"],
+      "usage": "1-2 капли в каждую ноздрю 2-3 раза в день",
+      "contraindications": "Атрофический ринит, детский возраст до 1 года",
+      "image": "images/nazivin.jpg",
+      "popularity": 89
+    },
+    {
+      "id": 14,
+      "name": "Мукалтин",
+      "description": "Отхаркивающее средство от кашля",
+      "price": 70,
+      "category": "cold",
+      "symptoms": ["Кашель"],
+      "usage": "1-2 таблетки 3 раза в день перед едой",
+      "contraindications": "Язвенная болезнь, индивидуальная непереносимость",
+      "image": "images/mukaltin.jpg",
+      "popularity": 81
+    },
+    {
+      "id": 15,
+      "name": "Магний B6",
+      "description": "Витаминный комплекс для нервной системы",
+      "price": 320,
+      "category": "vitamins",
+      "symptoms": ["Стресс", "Усталость"],
+      "usage": "1 таблетка 2 раза в день во время еды",
+      "contraindications": "Почечная недостаточность, индивидуальная непереносимость",
+      "image": "images/magnesium-b6.jpg",
+      "popularity": 86
+    }
+  ],
+  "symptoms": [
+    {
+      "id": 1,
+      "name": "Головная боль",
+      "category": "pain"
+    },
+    {
+      "id": 2,
+      "name": "Температура",
+      "category": "fever"
+    },
+    {
+      "id": 3,
+      "name": "Кашель",
+      "category": "cold"
+    },
+    {
+      "id": 4,
+      "name": "Насморк",
+      "category": "cold"
+    },
+    {
+      "id": 5,
+      "name": "Боль в горле",
+      "category": "cold"
+    },
+    {
+      "id": 6,
+      "name": "Тошнота",
+      "category": "stomach"
+    },
+    {
+      "id": 7,
+      "name": "Изжога",
+      "category": "stomach"
+    },
+    {
+      "id": 8,
+      "name": "Боль в животе",
+      "category": "stomach"
+    },
+    {
+      "id": 9,
+      "name": "Бессонница",
+      "category": "sleep"
+    },
+    {
+      "id": 10,
+      "name": "Стресс",
+      "category": "stress"
+    },
+    {
+      "id": 11,
+      "name": "Усталость",
+      "category": "vitamins"
+    },
+    {
+      "id": 12,
+      "name": "Боль в суставах",
+      "category": "pain"
+    },
+    {
+      "id": 13,
+      "name": "Аллергия",
+      "category": "allergy"
+    },
+    {
+      "id": 14,
+      "name": "Высокое давление",
+      "category": "heart"
+    },
+    {
+      "id": 15,
+      "name": "Боль в сердце",
+      "category": "heart"
+    }
+  ],
+  "categories": [
+    {
+      "id": "pain",
+      "name": "Обезболивающие",
+      "description": "Препараты для снятия боли различного происхождения"
+    },
+    {
+      "id": "cold",
+      "name": "От простуды",
+      "description": "Средства для лечения простудных заболеваний"
+    },
+    {
+      "id": "vitamins",
+      "name": "Витамины",
+      "description": "Витаминные комплексы и биологически активные добавки"
+    },
+    {
+      "id": "heart",
+      "name": "Сердечно-сосудистые",
+      "description": "Препараты для лечения заболеваний сердца и сосудов"
+    },
+    {
+      "id": "stomach",
+      "name": "Желудочно-кишечные",
+      "description": "Средства для лечения заболеваний ЖКТ"
+    },
+    {
+      "id": "allergy",
+      "name": "От аллергии",
+      "description": "Антигистаминные препараты"
+    },
+    {
+      "id": "sleep",
+      "name": "Для сна",
+      "description": "Средства для нормализации сна"
+    },
+    {
+      "id": "stress",
+      "name": "Успокоительные",
+      "description": "Препараты для снятия стресса и тревоги"
+    },
+    {
+      "id": "antibiotics",
+      "name": "Антибиотики",
+      "description": "Антибактериальные препараты"
+    }
+  ]
+} 

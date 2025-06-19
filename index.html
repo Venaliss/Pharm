@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аптека "Здоровье" - Ваш надежный партнер в заботе о здоровье</title>
+    <meta name="description" content="Широкий ассортимент лекарственных препаратов, витаминов и медицинских товаров. Консультации фармацевтов, быстрая доставка.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Аптека "Здоровье"</h1>
+                    <p>Ваш надежный партнер в заботе о здоровье</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Главная</a></li>
+                        <li><a href="#catalog" class="nav-link">Каталог</a></li>
+                        <li><a href="#symptoms" class="nav-link">По симптомам</a></li>
+                        <li><a href="#about" class="nav-link">О нас</a></li>
+                        <li><a href="#contact" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn" id="searchBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="cart-btn" id="cartBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="modal" id="searchModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Поиск лекарств</h3>
+                <button class="modal-close" id="searchModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="search-form">
+                    <input type="text" id="searchInput" placeholder="Введите название лекарства или симптом...">
+                    <button type="button" id="searchSubmit">Найти</button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Корзина</h3>
+                <button class="modal-close" id="cartModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="cart-items" id="cartItems">
+                    <p class="empty-cart">Корзина пуста</p>
+                </div>
+                <div class="cart-total" id="cartTotal" style="display: none;">
+                    <div class="total-info">
+                        <span>Итого:</span>
+                        <span class="total-price" id="totalPrice">0 ₽</span>
+                    </div>
+                    <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2>Здоровье начинается здесь</h2>
+                        <p>Широкий ассортимент лекарственных препаратов, витаминов и медицинских товаров. Консультации опытных фармацевтов и быстрая доставка.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="scrollToSection('catalog')">Перейти в каталог</button>
+                            <button class="btn btn-secondary" onclick="scrollToSection('symptoms')">По симптомам</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-placeholder">
+                            <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Symptoms Section -->
+        <section class="symptoms" id="symptoms">
+            <div class="container">
+                <h2 class="section-title">Выберите симптомы</h2>
+                <p class="section-subtitle">Нажмите на симптомы, которые вас беспокоят, и мы подберем подходящие лекарства</p>
+                
+                <div class="symptoms-grid" id="symptomsGrid">
+                    <!-- Symptoms will be loaded dynamically -->
+                </div>
+
+                <div class="selected-symptoms" id="selectedSymptoms" style="display: none;">
+                    <h3>Выбранные симптомы:</h3>
+                    <div class="selected-symptoms-list" id="selectedSymptomsList"></div>
+                    <button class="btn btn-primary" id="findMedicinesBtn">Найти лекарства</button>
+                </div>
+
+                <div class="medicines-results" id="medicinesResults" style="display: none;">
+                    <h3>Рекомендуемые лекарства:</h3>
+                    <div class="medicines-grid" id="medicinesResultsGrid"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <section class="catalog" id="catalog">
+            <div class="container">
+                <h2 class="section-title">Каталог лекарств</h2>
+                
+                <div class="catalog-controls">
+                    <div class="filters">
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="">Все категории</option>
+                            <option value="pain">Обезболивающие</option>
+                            <option value="cold">От простуды</option>
+                            <option value="vitamins">Витамины</option>
+                            <option value="heart">Сердечно-сосудистые</option>
+                            <option value="stomach">Желудочно-кишечные</option>
+                        </select>
+                        <select id="sortFilter" class="filter-select">
+                            <option value="name">По названию</option>
+                            <option value="price-low">По цене (дешевле)</option>
+                            <option value="price-high">По цене (дороже)</option>
+                            <option value="popular">По популярности</option>
+                        </select>
+                    </div>
+                    <div class="search-catalog">
+                        <input type="text" id="catalogSearch" placeholder="Поиск в каталоге...">
+                    </div>
+                </div>
+
+                <div class="catalog-grid" id="catalogGrid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+
+                <div class="loading" id="catalogLoading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Загрузка товаров...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>О нашей аптеке</h2>
+                        <p>Аптека "Здоровье" - это современная сеть аптек, которая заботится о здоровье наших клиентов уже более 15 лет. Мы предлагаем широкий ассортимент лекарственных препаратов, витаминов, биологически активных добавок и медицинских товаров.</p>
+                        <p>Наши преимущества:</p>
+                        <ul>
+                            <li>✅ Лицензированные препараты от проверенных производителей</li>
+                            <li>✅ Консультации опытных фармацевтов</li>
+                            <li>✅ Быстрая доставка по городу</li>
+                            <li>✅ Удобный онлайн-каталог</li>
+                            <li>✅ Программа лояльности</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <div class="about-placeholder">
+                            <svg width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Контакты</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Адрес</h3>
+                            <p>г. Москва, ул. Здоровья, д. 1</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Телефон</h3>
+                            <p>+7 (495) 123-45-67</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p>info@apteka-zdorovie.ru</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Режим работы</h3>
+                            <p>Ежедневно с 8:00 до 22:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Обратная связь</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="contactName" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="contactEmail" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="contactMessage" placeholder="Сообщение" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Аптека "Здоровье"</h3>
+                    <p>Ваш надежный партнер в заботе о здоровье</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Помощь</h4>
+                    <ul>
+                        <li><a href="#symptoms">По симптомам</a></li>
+                        <li><a href="#contact">Консультация</a></li>
+                        <li><a href="#contact">Доставка</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Аптека "Здоровье". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content product-modal">
+            <div class="modal-header">
+                <h3 id="productModalTitle">Название препарата</h3>
+                <button class="modal-close" id="productModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="product-details" id="productModalContent">
+                    <!-- Product details will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
