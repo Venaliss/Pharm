@@ -120,6 +120,13 @@ function setupEventListeners() {
             hideModal(e.target);
         }
     });
+
+    // Закрытие checkoutModal по клику вне окна
+    window.addEventListener('click', (e) => {
+        if (e.target === checkoutModal) {
+            hideModal(checkoutModal);
+        }
+    });
 }
 
 // Загрузка продуктов (имитация API)
@@ -578,17 +585,28 @@ function checkout() {
         alert('Корзина пуста');
         return;
     }
-    
-    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    
-    if (confirm(`Оформить заказ на сумму ${total} ₽?`)) {
-        alert('Заказ оформлен! Мы свяжемся с вами для подтверждения.');
-        cart = [];
-        saveCart();
-        updateCartDisplay();
-        hideModal(cartModal);
-    }
+    hideModal(cartModal);
+    showModal(document.getElementById('checkoutModal'));
 }
+
+// Обработка формы оформления заказа
+const checkoutForm = document.getElementById('checkoutForm');
+const checkoutModal = document.getElementById('checkoutModal');
+const checkoutModalClose = document.getElementById('checkoutModalClose');
+
+checkoutForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Имитация оформления заказа
+    alert('Спасибо за заказ! Мы свяжемся с вами для подтверждения.');
+    cart = [];
+    saveCart();
+    updateCartDisplay();
+    hideModal(checkoutModal);
+});
+
+checkoutModalClose.addEventListener('click', function() {
+    hideModal(checkoutModal);
+});
 
 // Поиск
 function performSearch() {

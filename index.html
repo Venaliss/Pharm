@@ -86,8 +86,37 @@
                         <span>Итого:</span>
                         <span class="total-price" id="totalPrice">0 ₽</span>
                     </div>
-                    <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+                    <button class="checkout-btn" id="checkoutBtn" type="button">Оформить заказ</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Оформление заказа</h3>
+                <button class="modal-close" id="checkoutModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <input id="orderPhone" placeholder="Телефон">
+                    </div>
+                    <div class="form-group">
+                        <input id="orderEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <select id="orderPharmacy">
+                            <option value="">Выберите аптеку</option>
+                            <option value="Москва, ул. Здоровья, д. 1">Москва, ул. Здоровья, д. 1</option>
+                            <option value="Москва, пр-т Мира, д. 10">Москва, пр-т Мира, д. 10</option>
+                            <option value="Москва, ул. Ленина, д. 5">Москва, ул. Ленина, д. 5</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Подтвердить заказ</button>
+                </form>
             </div>
         </div>
     </div>
@@ -191,13 +220,7 @@
                         </ul>
                     </div>
                     <div class="about-image">
-                        <div class="about-placeholder">
-                            <svg width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                                <path d="M2 17l10 5 10-5"></path>
-                                <path d="M2 12l10 5 10-5"></path>
-                            </svg>
-                        </div>
+                        <img src="images/about.jpg" alt="О нашей аптеке" class="about-img">
                     </div>
                 </div>
             </div>
